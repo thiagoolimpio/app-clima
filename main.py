@@ -8,13 +8,13 @@ import pytz
 import pycountry_convert as pc
 
 ################# cor ################
-cor1 ='#444466' # preto
+cor1 ='#C0C0C0' # azul
 cor2 ='#feffff' # branco
-cor3 ='#6f9fbd' # azul
+cor3 ='#000000' # preto
 
-bck_dia = '#6cc4cc'
-bck_noite = '#484f60'
-bck_tarde = '#bfb86d'
+bck_dia = '#C0C0C0'
+bck_noite = '#708090'
+bck_tarde = '#778899'
 
 fundo = bck_dia
 
@@ -28,9 +28,6 @@ janela.configure(bg=fundo)
 ttk.Separator(janela, orient=HORIZONTAL).grid(row=0, columnspan=1, padx=157)
 
 global imagem
-
-
-
 
 # criando os frames
 frame_top = Frame(janela, width=320, height=50, bg=cor2, pady=0, padx=0, )
@@ -136,8 +133,7 @@ def informacao():
     zona_periodo = int(zona_periodo)
     
     if zona_periodo <= 5:
-        imagem =  Image.open('imagens/noite.png')
-        
+        imagem =  Image.open('imagens/noite.png')       
     elif zona_periodo <= 11:
         imagem =  Image.open('imagens/sol.png')
     else:
@@ -145,7 +141,7 @@ def informacao():
         
         
         
-    imagem = imagem.resize((130, 130))
+    imagem = image.resize((130, 130))
     imagem = ImageTk.PhotoImage(imagem)
 
     l_icon = Label(frame_corpo, image=imagem, bg=fundo, font=("Arial 10"))
