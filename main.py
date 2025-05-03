@@ -78,6 +78,8 @@ def informacao():
     api_link = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid={}'.format(cidade,chave)
 
 
+
+
     #--------chamando a API com o requests
     r = requests.get(api_link)
 
